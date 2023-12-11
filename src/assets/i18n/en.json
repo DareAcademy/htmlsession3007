@@ -1,0 +1,22 @@
+{
+    "Login":{
+        "username":"Username",
+        "password":"Password",
+        "language":"language",
+        "Englishlanguage":"English",
+        "Arabiclanguage":"Arabic"
+    },
+    "NewCountry":{
+        "Name":"Name",
+        "Code":"Code"
+    },
+    "Action":{
+        "Save":"Save",
+        "Update":"Update",
+        "Login":"Login"
+    },
+    "alerts":
+    {
+        "SuccessMessage":"Save Successfully"
+    }
+}

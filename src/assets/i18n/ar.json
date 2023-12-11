@@ -1,0 +1,22 @@
+{
+    "Login":{
+        "username":"اسم المستخدم",
+        "password":"كلمة المرور",
+        "language":"اللغه",
+        "Englishlanguage":"الانجليزية",
+        "Arabiclanguage":"العربية"
+    },
+    "NewCountry":{
+        "Name":"الاسم",
+        "Code":"الرمز"
+    },
+    "Action":{
+        "Save":"حفظ",
+        "Update":"تعديل",
+        "Login":"تسجيل دخول"
+    },
+    "alerts":
+    {
+        "SuccessMessage":"تم الحفظ بنجاح"
+    }
+}

@@ -1,0 +1,54 @@
+<form [formGroup]="userForm">
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" formControlName="txtName" placeholder="name">
+        <span *ngIf="userForm.controls['txtName'].touched && userForm.hasError('required','txtName')" >
+            Please fill out the name of user
+          </span>
+      </div>
+      <div class="mb-3">
+
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" formControlName="rbGender"  value="Male">
+            <label class="form-check-label" >Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" formControlName="rbGender"  value="Female">
+            <label class="form-check-label">Female</label>
+          </div>
+
+
+
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="text" class="form-control" formControlName="txtEmail" placeholder="email">
+        <span *ngIf="userForm.controls['txtEmail'].touched && userForm.hasError('required','txtEmail')" >
+            Please fill out the name of user
+          </span>
+          <span *ngIf="userForm.controls['txtEmail'].touched && userForm.hasError('email','txtEmail')" >
+            Please fill out with valid email address
+          </span>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" formControlName="txtPassword" placeholder="password">
+        <span *ngIf="userForm.controls['txtPassword'].touched && userForm.hasError('required','txtPassword')" >
+            Please fill out the password
+          </span>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" formControlName="txtConfirmPassword" placeholder="Confirm password">
+        <span *ngIf="userForm.controls['txtConfirmPassword'].touched && userForm.hasError('required','txtConfirmPassword')" >
+            Please fill out the confirm password
+          </span>
+      </div>
+
+      <div class="mb-3">
+
+        <input type="button" class="btn btn-primary" value="Create Account" (click)="AddUser()">
+       </div>
+</form>

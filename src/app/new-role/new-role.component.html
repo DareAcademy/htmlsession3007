@@ -1,0 +1,16 @@
+<form [formGroup]="roleForms">
+
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" formControlName="txtName" placeholder="name">
+        <span *ngIf="roleForms.controls['txtName'].touched && roleForms.hasError('required','txtName')" >
+            Please fill out the role name
+          </span>
+      </div>
+
+      <div class="mb-3">
+
+        <input type="button" class="btn btn-primary" value="Save" (click)="AddRole()">
+       </div>
+
+</form>

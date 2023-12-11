@@ -1,0 +1,41 @@
+<div class="container">
+<div class="row">
+    <div class="col-12">
+
+
+<form [formGroup]="LoginForm">
+    <div class="mb-3">
+        <label class="form-label">{{'Login.username' | translate}}</label>
+        <input type="text" class="form-control" formControlName="txtUsername" placeholder="username">
+        <span *ngIf="LoginForm.controls['txtUsername'].touched && LoginForm.hasError('required','txtUsername')" >
+            Please fill out the username
+          </span>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">{{'Login.password' | translate}}</label>
+        <input type="password" class="form-control" formControlName="txtPassword" placeholder="password">
+        <span *ngIf="LoginForm.controls['txtPassword'].touched && LoginForm.hasError('required','txtPassword')" >
+            Please fill out the txtPassword
+          </span>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">{{'Login.language' | translate}}</label>
+        <select (change)="changeLanguage()" class="form-select" #ddllanguage >
+          <option value="en">{{'Login.Englishlanguage' | translate}}</option>
+          <option value="ar">{{'Login.Arabiclanguage' | translate}}</option>
+        </select>
+        <span *ngIf="LoginForm.controls['txtPassword'].touched && LoginForm.hasError('required','txtPassword')" >
+            Please fill out the txtPassword
+          </span>
+      </div>
+
+      <div class="mb-3">
+
+        <input type="button" class="btn btn-primary" [value]="'Action.Login' | translate" (click)="onLogin()">
+       </div>
+</form>
+
+</div>
+</div>
+
+</div>
